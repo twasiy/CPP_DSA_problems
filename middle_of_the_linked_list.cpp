@@ -6,15 +6,15 @@ struct Node{
 };
 
 class List{
-    Node* head = nullptr;
-    Node* tail = nullptr;
+    Node* head{nullptr};
+    Node* tail{nullptr};
 
 public:
     void insert_in_front(int val){
         Node* newNode = new Node();
         newNode->data = val;
         newNode->next = head;
-        if(head == NULL){
+        if(head == nullptr){
             head = tail = newNode;
         }else {
             head = newNode;
@@ -24,8 +24,8 @@ public:
     void insert_in_back(int val){
         Node* newNode = new Node();
         newNode->data = val;
-        newNode->next = NULL;
-        if(head == NULL){
+        newNode->next = nullptr;
+        if(head == nullptr){
             head = tail = newNode;
         }else{
             tail->next = newNode;
@@ -35,7 +35,7 @@ public:
 
     void printll(){
         Node* temp = head;
-        while(temp != NULL){
+        while(temp != nullptr){
             std::cout << temp->data << " ";
             temp = temp->next;
         }
@@ -45,11 +45,11 @@ public:
 
     int middleNode(){
         int count{};
-        if (head == NULL) {
+        if (head == nullptr) {
             std::cout << "List is empty!" << std::endl;
         }
         Node* temp = head;
-        while(temp != NULL){
+        while(temp != nullptr){
             count++;
             temp = temp->next;
         }
@@ -66,11 +66,11 @@ public:
         Node* fast;
         slow = fast = head;
 
-        if (head == NULL) {
+        if (head == nullptr) {
             std::cout << "List is empty!" << std::endl;
         }
 
-        while(fast != NULL && fast->next != NULL){
+        while(fast != nullptr && fast->next != nullptr){
             slow = slow->next;
             fast = fast->next->next;
         }
