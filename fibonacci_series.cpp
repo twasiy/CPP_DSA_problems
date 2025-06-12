@@ -1,8 +1,7 @@
 ////Fibonacci series wih better time complextiy.
 #include <iostream>
 
-int main()
-{
+int main(){
     size_t n = 10000;
     size_t a = 1, b = 1;
 

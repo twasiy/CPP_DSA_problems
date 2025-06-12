@@ -2,7 +2,7 @@
 #include <vector>
 #include <unordered_map>
 
-////This is brute force approch for solving this probelem.
+////This is brute force approch for solving this problem.
 int subarr_sum(std::vector<int> &arr, int k){
     int n = arr.size();
     int count = 0;
