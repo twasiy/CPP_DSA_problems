@@ -17,7 +17,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/CPP_DSA_problems.git
+   git clone https://github.com/twasiy/CPP_DSA_problems.git
    cd CPP_DSA_problems
    
 g++ path/to/file.cpp -o output
