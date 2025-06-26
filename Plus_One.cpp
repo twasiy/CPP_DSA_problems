@@ -5,7 +5,6 @@
 //This is the most optimal solution for this problem
 std::vector<int> plusOne(std::vector<int>& digits) {
     int n = digits.size();
-
     for (int i = n - 1; i >= 0; --i) {
         if (digits[i] < 9) {
             digits[i] += 1;
@@ -13,7 +12,6 @@ std::vector<int> plusOne(std::vector<int>& digits) {
         }
         digits[i] = 0; // set to 0 and carry to next
     }
-
     // All digits were 9 → need extra 1 at front
     digits.insert(digits.begin(), 1);
     return digits;
@@ -40,7 +38,6 @@ std::vector<int> plusone(std::vector<int>& digit){
     std::reverse(res.begin(),res.end());
     return res;
 }
-
 
 int main() {
     //main solution

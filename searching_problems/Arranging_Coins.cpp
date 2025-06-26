@@ -3,7 +3,6 @@
 int arrangeCoins(int n) {
     int st = 0,end = n;
     int result = 0;
-
     while(st <= end){
         int mid = st + (end - st) / 2;
         long long sum = (1LL * mid * (mid + 1)) / 2;  // Using 1LL to avoid overflow

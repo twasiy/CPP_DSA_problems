@@ -11,18 +11,15 @@ std::vector<int> SpiralOrder(std::vector<std::vector<int>>& mat){
         for (int j = scol; j <= ecol; j++){
             ans.push_back(mat[srow][j]);
         }
-
         // right
         for (int i = srow + 1; i <= erow; i++){
             ans.push_back(mat[i][ecol]);
         }
-
         // bottom
         for (int j = ecol - 1; j >= scol; j--){
             if (srow == erow) break;
             ans.push_back(mat[erow][j]);
         }
-
         // left
         for (int i = erow - 1; i > srow; i--){
             if (scol == ecol) break;

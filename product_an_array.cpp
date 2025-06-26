@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 
-////product of an array except self in optimal approch.(Tow pointer approch)
+////product of an array except self in optimal approch.(Two pointer approch)
 std::vector<int> productExceptSelf(std::vector<int> &nums){
     int n = nums.size();
     std::vector<int> ans(n, 1);
@@ -25,7 +25,14 @@ int main(){
     std::vector <int> nums = {1,2,3,4};
     int n = nums.size();
 
-    ////product of an array except self in normal brute force approch.
+    std::vector<int> result = productExceptSelf(nums);
+
+    for(int val:result){
+        std::cout << val << " ";
+    }
+    std::cout << std::endl;
+
+    //product of an array except self in normal brute force approch.
     std::vector <int> ans(n,1);
 
     for (int i = 0; i < n; i++){

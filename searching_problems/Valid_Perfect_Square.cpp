@@ -8,17 +8,18 @@ bool isPerfectSquare(int num){
         long long mid = left + (right - left) / 2;
         long long square = mid * mid;
 
-        if (square == num)
+        if (square == num){
             return true;
-        else if (square < num)
+        }else if (square < num){
             left = mid + 1;
-        else
+        }else{
             right = mid - 1;
+        }
     }
     return false;
 }
 
-// It is general purpose for this problem.
+// It is general purpose solution for this problem.
 bool valid_perfect_square(int num){
     if(num == 0) return false;
     if(num == 1) return true;
