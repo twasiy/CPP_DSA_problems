@@ -2,7 +2,8 @@
 #include <vector>
 
 void getAllSubsets(std::vector<int> &nums, std::vector<int> &ans, int i, std::vector<std::vector<int>> &allsubsets){
-    if (i == nums.size()){
+    int n = nums.size();
+    if (i == n){
         allsubsets.push_back({ans});
         return;
     }
@@ -25,5 +26,13 @@ std::vector<std::vector<int>> subsets(std::vector<int>& nums){
 
 int main(){
     std::vector<int> nums{1,2,3,4,5};
+    auto value = subsets(nums);
+    for(auto val:value){
+        for(auto v:val){
+            std::cout << v << " ";
+        }
+    std::cout << std::endl;
+    }
+    //std::cout << "\t";
     return 0;
 }
